@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>Money Map</title>
+	<link rel="stylesheet" type="text/css" href="../css/moneyMap_common.css">
+	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body class="chat_bg">
+	<div id="wrap">
+		<div id="header" class="st2">
+			<h1 class="tal">홍길동 세무서</h1>
+			<a href="#n" class="prev"><span class="blind">이전페이지</span></a>
+			<a href="#n" class="more"><span class="blind">더보기</span></a>
+		</div>
+		<div id="content" class="full">
+			<div class="chat_view">
+				<div class="spc spc1">
+					<div class="bx">안녕하세요!<br>부가세신고 부탁드려요!</div>
+					<div class="time">오전 11:03</div>
+				</div>
+				<div class="spc spc2">
+					<div class="name">홍길동 세무서</div>
+					<div class="bx">네! 부가세납부서<br>캐시맵에서 확인해주세요~캐시맵에서 확인해주세요~</div>
+					<div class="time">오후 03:12</div>
+				</div>
+				<div class="spc spc1">
+					<div class="bx">네!! 감사합니다!</div>
+					<div class="time">오후 03:23</div>
+				</div>
+				<div class="date"><strong>2017년 4월 10일 월요일</strong></div><!-- 날짜 -->
+				<div class="spc spc1">
+					<div class="bx">안녕하세요~ <br>소득세신고 부탁드려요!</div>
+					<div class="time">오전 11:13</div>
+				</div>
+				<div class="spc spc1">
+					<div class="bx pic"><img src="../images/moneyMap/pic.jpg" alt=""></div>
+					<div class="time">오전 11:13</div>
+				</div>
+				<div class="spc spc2">
+					<div class="name">홍길동 세무서</div>
+					<div class="bx">소득세납부서<br>캐시맵에서 확인해주세요^^</div>
+					<div class="time">오후 03:12</div>
+				</div>
+			</div>
+			<div class="msg_bx">
+				<div class="txt_bx">
+					<input type="button" class="file" value="파일 가져오기">
+					<textarea id="txt" placeholder="메세지를 입력해주세요."></textarea>
+					<input type="button" class="submit" value="전송">
+					<!-- 버튼 활성화시에
+                    <input type="button" class="submit active" value="전송">-->
+				</div>
+			</div>
+			<script type="text/javascript">
+			$(window).ready(function(e){
+				$("#txt").on('input', function () {
+					var h = $(this).prop('scrollHeight')
+					if(h >= 25 && h < 60){
+				  		$(this).height(1).height( $(this).prop('scrollHeight') );
+					}else if(h > 62){
+				  		$(this).css('overflow','height');
+					}
+				});
+			})
+			</script>
+		</div>
+	</div>
+</body>
+</html>
